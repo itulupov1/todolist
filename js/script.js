@@ -47,14 +47,11 @@ const render = function() {
 			}
 			render();
 		});
-		// localStorage.clear();
-		// localStorage.setItem('kek', JSON.stringify(todoData));
 	});
 };
 
 todoControl.addEventListener('submit', function(event){
 	event.preventDefault();
-
 	if (headerInput.value !== ''){
 		const newTodo = {
 			value: headerInput.value,
@@ -69,6 +66,3 @@ todoControl.addEventListener('submit', function(event){
 });
 
 render();
-
-// localStorage.setItem(todoData, JSON.stringify(todoData));
-// todoData = JSON.parse(localStorage.getItem("todoData"));
