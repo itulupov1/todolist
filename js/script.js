@@ -6,7 +6,12 @@ const todoList = document.querySelector('.todo-list');
 const todoCompleted = document.querySelector('.todo-completed');
 
 const arr = JSON.parse(localStorage.getItem('arr'));
-const todoData = arr;
+let todoData;
+if(arr !== null) {
+	todoData = arr;
+} else {
+	todoData = [];
+}
 
 const render = function() {
 	todoList.textContent = '';
