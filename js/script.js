@@ -36,6 +36,8 @@ const render = function() {
 
 		btnTodoComplete.addEventListener('click', function(){
 			item.completed = !item.completed;
+			localStorage.clear();
+			localStorage.setItem('arr', JSON.stringify(todoData));
 			render();
 		});
 		
